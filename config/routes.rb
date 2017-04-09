@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  resources :messages
-  resources :users 
+  resources :users do
+  	resources :messages
+  end
 end
