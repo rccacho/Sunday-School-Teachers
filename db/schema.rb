@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170409042531) do
+ActiveRecord::Schema.define(version: 20170409043322) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "activities", force: :cascade do |t|
+    t.string   "key_verse"
+    t.string   "review"
+    t.string   "description"
+    t.string   "materials"
+    t.string   "media_ref"
+    t.integer  "user_id"
+    t.integer  "message_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["message_id"], name: "index_activities_on_message_id", using: :btree
+    t.index ["user_id"], name: "index_activities_on_user_id", using: :btree
+  end
 
   create_table "messages", force: :cascade do |t|
     t.string   "series"
@@ -41,5 +55,7 @@ ActiveRecord::Schema.define(version: 20170409042531) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "activities", "messages"
+  add_foreign_key "activities", "users"
   add_foreign_key "messages", "users"
 end
