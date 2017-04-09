@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :activities
   resources :users do
-  	resources :messages
+  	resources :messages do
+  	  resources :activities, shallow: true
+  	end
   end
 end
