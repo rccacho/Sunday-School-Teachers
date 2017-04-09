@@ -2,6 +2,9 @@ class UsersController < ApplicationController
   before_action :set_user, only:        [:show, :edit, :update, :destroy]
   before_action :is_current_user, only: [       :edit, :update, :destroy]
 
+  def home
+  end
+
   # GET /users
   def index
     @users = User.all
@@ -9,6 +12,10 @@ class UsersController < ApplicationController
 
   # GET /users/1
   def show
+    @user = User.find_by_id(params[:id])
+    if !logged_in?
+      redirect_to login_path
+    end
   end
 
   # GET /users/new
@@ -23,34 +30,35 @@ class UsersController < ApplicationController
   # POST /users
   def create
     @user = User.new(user_params)
-
     if @user.save
-      redirect_to @user, notice: 'User was successfully created.'
+      log_in(@user)
+      flash[:success] = "User created successfully!"
+      redirect_to user_path(@user)
     else
-      render :new
+      flash[:error] = "Not Valid Account Info"
+      redirect_to login_path
     end
   end
 
   # PATCH/PUT /users/1
   def update
-    if @user.update(user_params)
-      redirect_to @user, notice: 'User was successfully updated.'
-    else
-      render :edit
-    end
+    @user = User.find_by_id(params[:id])
+    @user.update(user_params)
+    redirect_to user_path(@user)
   end
 
   # DELETE /users/1
   def destroy
     @user.destroy
-    redirect_to users_url, notice: 'User was successfully destroyed.'
+    flash[:success] = "User deleted successfully"
+    redirect_to root_path
   end
 
   private
     def is_current_user
       @user = User.find_by_id(params[:id])
       if @user != current_user
-        redirect_to root_path
+        redirect_to login_path
       end
     end
     # Use callbacks to share common setup or constraints between actions.
