@@ -25,7 +25,7 @@ class MessagesController < ApplicationController
     message[:user_id] = params[:user_id]
     @message = Message.new(message)
     if @message.save
-      redirect_to user_message_path(current_user)
+      redirect_to message_path(@message)
     else
       flash[:error] = "Wrong message parameters"
       render :new

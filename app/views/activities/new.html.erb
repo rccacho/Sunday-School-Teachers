@@ -1,5 +1,8 @@
+<%= render 'layouts/header', user: @user %>
+<%= render 'layouts/spacer', user: @user %>
+
 <h1>New Activity</h1>
 
 <%= render 'form', activity: @activity %>
 
-<%= link_to 'Back', activities_path %>
+
