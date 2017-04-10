@@ -8,10 +8,10 @@
 <% @messages.each do |message| %>
 
   <p>Series: <%= message.series %></p>
-  <p>Title: <%= message.title %></p>
+  <p>Title: <%=link_to "#{message.title}", message_path(message) %></p>
 
 <% end %>
 
-
+<%= link_to 'New Message', new_user_message_path(current_user) %>
 
 
