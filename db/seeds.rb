@@ -83,6 +83,51 @@ m4 = Message.create({
 	featured: "no",
 	user_id: potato.id
 })
+m5 = Message.create({
+	series: "Metamorphosis",
+	title: "Week 2",
+	content: "2Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+	costumes: "antennae",
+	props: "none",
+	featured: "no",
+	user_id: bar.id
+})
+m6 = Message.create({
+	series: "Metamorphosis",
+	title: "Week 3",
+	content: "3Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+	costumes: "antennae",
+	props: "none",
+	featured: "no",
+	user_id: foo.id
+})
+m7 = Message.create({
+	series: "Voyage of the Barnacled Bandits",
+	title: "Week 2",
+	content: "2!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+	costumes: "bandanas, boots, captain's coat",
+	props: "sword, map",
+	featured: "no",
+	user_id: bar.id
+})
+m8 = Message.create({
+	series: "Voyage of the Barnacled Bandits",
+	title: "Week 3",
+	content: "3!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+	costumes: "bandanas, boots, captain's coat",
+	props: "sword, map",
+	featured: "no",
+	user_id: baz.id
+})
+m9 = Message.create({
+	series: "Joe the Dreamer",
+	title: "Week 2",
+	content: "2?Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+	costumes: "cape",
+	props: "basket, bread",
+	featured: "yes",
+	user_id: potato.id
+})
 
 a1 = Activity.create ({
 	key_verse: "Phil 1:6",
@@ -119,4 +164,13 @@ a4 = Activity.create ({
 	media_ref: "none",
 	message_id: m4.id,
 	user_id: baz.id
+})
+a5 = Activity.create ({
+	key_verse: "Phil 1:6",
+	review: "Lorem ipsum dolor sit amet",
+	description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+	materials: "crayons, paper, scissors",
+	media_ref: "none",
+	message_id: m1.id,
+	user_id: foo.id
 })
