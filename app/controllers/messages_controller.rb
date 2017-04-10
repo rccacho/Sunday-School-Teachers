@@ -12,7 +12,7 @@ class MessagesController < ApplicationController
 
   # GET /messages/new
   def new
-    @message = Message.new
+    @message = Message.new(user_id: params[:user_id])
   end
 
   # GET /messages/1/edit
@@ -21,11 +21,13 @@ class MessagesController < ApplicationController
 
   # POST /messages
   def create
-    @message = Message.new(message_params)
-
+    message = message_params
+    message[:user_id] = params[:user_id]
+    @message = Message.new(message)
     if @message.save
-      redirect_to @message, notice: 'Message was successfully created.'
+      redirect_to user_message_path(current_user)
     else
+      flash[:error] = "Wrong message parameters"
       render :new
     end
   end
