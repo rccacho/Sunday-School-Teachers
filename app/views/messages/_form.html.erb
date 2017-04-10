@@ -13,40 +13,36 @@
 
   <div class="field">
     <%= f.label :series %>
-    <%= f.text_field :series %>
+    <%= f.text_field :series, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= f.label :content %>
-    <%= f.text_field :content %>
+    <%= f.text_field :title, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :costumes %>
-    <%= f.text_field :costumes %>
+    <%= f.text_field :costumes, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :props %>
-    <%= f.text_field :props %>
+    <%= f.text_field :props, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :featured %>
-    <%= f.check_box :featured %>
+    <%= f.check_box :featured, class: 'form-control' %>
   </div>
 
   <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
+    <%= f.label :content %>
+    <%= f.text_area :content, class: 'form-control' %>
   </div>
 
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'OK', class: "btn btn-default" %>
   </div>
 <% end %>
