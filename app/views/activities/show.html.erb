@@ -1,39 +1,14 @@
+<%= render 'layouts/header', user: @user %>
+<%= render 'layouts/spacer', user: @user %>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Key verse:</strong>
-  <%= @activity.key_verse %>
-</p>
+<p>Key verse: <%= @activity.key_verse %></p>
+<p>Review: <%= @activity.review %></p>
+<p>Description: <%= @activity.description %></p>
+<p>Materials: <%= @activity.materials %></p>
+<p>Media Reference: <%= @activity.media_ref %></p>
 
-<p>
-  <strong>Review:</strong>
-  <%= @activity.review %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @activity.description %>
-</p>
-
-<p>
-  <strong>Materials:</strong>
-  <%= @activity.materials %>
-</p>
-
-<p>
-  <strong>Media ref:</strong>
-  <%= @activity.media_ref %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @activity.user %>
-</p>
-
-<p>
-  <strong>Message:</strong>
-  <%= @activity.message %>
-</p>
 
 <%= link_to 'Edit', edit_activity_path(@activity) %> |
-<%= link_to 'Back', activities_path %>
+
