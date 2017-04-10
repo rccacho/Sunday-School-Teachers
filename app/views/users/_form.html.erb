@@ -13,45 +13,45 @@
 
   <div class="field">
     <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name, class: 'form-control', required: true %>
   </div>
 
   <div class="field">
     <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name, class: 'form-control', required: true %>
   </div>
 
   <div class="field">
     <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, class: 'form-control', required: true %>
   </div>
 
   <div class="field">
     <%= f.label :password %>
-    <%= f.text_field :password %>
+    <%= f.text_field :password, class: 'form-control', required: true %>
   </div>
 
   <div class="field">
     <%= f.label :birthday %>
-    <%= f.date_select :birthday %>
+    <%= f.date_select :birthday, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :phone %>
-    <%= f.text_field :phone %>
+    <%= f.text_field :phone, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :grade %>
-    <%= f.text_field :grade %>
+    <%= f.text_field :grade, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :image %>
-    <%= f.text_field :image %>
+    <%= f.text_field :image, class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'OK', class: "btn btn-default" %>
   </div>
 <% end %>
