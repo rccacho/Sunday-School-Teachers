@@ -1,5 +1,6 @@
 class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
+  before_action :set_message, only: [:new, :create, :index]
 
   # GET /activities
   def index
@@ -12,7 +13,7 @@ class ActivitiesController < ApplicationController
 
   # GET /activities/new
   def new
-    @activity = Activity.new
+    @activity = Activity.new(user_id: params[:user_id])
   end
 
   # GET /activities/1/edit
@@ -21,11 +22,13 @@ class ActivitiesController < ApplicationController
 
   # POST /activities
   def create
-    @activity = Activity.new(activity_params)
-
+    activity = activity_params
+    activity[:user_id] = params[:user_id]
+    @activity = Activity.new(activity)
     if @activity.save
-      redirect_to @activity, notice: 'Activity was successfully created.'
+      redirect_to activity_path(@activity)
     else
+      flash[:error] = "Wrong message parameters"
       render :new
     end
   end
@@ -49,6 +52,10 @@ class ActivitiesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_activity
       @activity = Activity.find(params[:id])
+    end
+
+    def set_message
+      @message = Message.find(params[:message_id])
     end
 
     # Only allow a trusted parameter "white list" through.
