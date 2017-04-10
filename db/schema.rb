@@ -46,13 +46,13 @@ ActiveRecord::Schema.define(version: 20170409043322) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.string   "password"
+    t.string   "password_digest"
     t.date     "birthday"
     t.string   "phone"
     t.string   "grade"
     t.string   "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   add_foreign_key "activities", "messages"
