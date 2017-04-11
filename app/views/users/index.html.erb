@@ -1,22 +1,17 @@
 <%= render 'layouts/header', user: @user %>
 <%= render 'layouts/spacer', user: @user %>
 
-<p id="notice"><%= notice %></p>
+<% @users.each do |user| %>
 
-    <% @users.each do |user| %>
-
-      <div class="row">
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <img src="http://media.oregonlive.com/themombeat/photo/11449196-large.jpg" alt="...">
-            <div class="caption text-center">
-              <h4><%= "Teacher " + user.first_name + " " + user.last_name %></h4>
-            </div>
-          </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="http://media.oregonlive.com/themombeat/photo/11449196-large.jpg" alt="...">
+        <div class="caption text-center">
+          <h4><%= "Teacher " + user.first_name + " " + user.last_name %></h4>
         </div>
       </div>
+    </div>
+  </div>
 
-    <% end %>
-
-
-<%= link_to 'New User', new_user_path %>
+<% end %>
