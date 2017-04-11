@@ -15,8 +15,8 @@
       <li><a href="/users/new">Sign Up</a></li>
     <% end %>
     <% if logged_in? %>
-      <li><a href="/users/:id">Profile</a></li>
-      <li><a href="/users/edit">Settings</a></li>
+      <li><%= link_to "Profile", user_path(current_user) %></li>
+      <li><%= link_to "Settings", edit_user_path(current_user) %></li>
       <li><a href="/logout">Log Out</a></li>
     <% end %>
       <li class="active"><a href="./">Off canvas navbar</a></li>
