@@ -1,9 +1,16 @@
 <%= render 'layouts/header', user: @user %>
 <%= render 'layouts/spacer', user: @user %>
 
-<p id="notice"><%= notice %></p>
-
 <h1>Messages</h1>
+
+<div class='messages-search'>
+  <%= form_tag messages_path, method: :get do %>
+    <div class='form-group'>
+      <span><%= text_field_tag :query, params[:query], class: 'form-control' %></span>
+      <%= submit_tag 'Search', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>
 
 <% @messages.each do |message| %>
 

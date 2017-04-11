@@ -4,6 +4,9 @@ class MessagesController < ApplicationController
   # GET /messages
   def index
     @messages = Message.all
+    if params[:query].present?
+      @messages = Message.search(params[:query])
+    end
   end
 
   # GET /messages/1
