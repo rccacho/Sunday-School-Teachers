@@ -22,9 +22,9 @@ class ActivitiesController < ApplicationController
 
   # POST /activities
   def create
-    activity = activity_params
-    activity[:user_id] = params[:user_id]
-    @activity = Activity.new(activity)
+    @activity = Activity.new(activity_params)
+    @activity.message = @message
+    @activity.user = current_user
     if @activity.save
       redirect_to activity_path(@activity)
     else
