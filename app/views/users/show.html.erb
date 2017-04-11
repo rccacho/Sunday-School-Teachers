@@ -1,0 +1,76 @@
+<%= render 'layouts/header', user: @user %>
+<%= render 'layouts/spacer', user: @user %>
+
+<% if current_user?(@user) %>
+
+  <div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="http://media.oregonlive.com/themombeat/photo/11449196-large.jpg" alt="...">
+        <div class="caption text-center">
+          <h4>My Messages</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="http://media.oregonlive.com/themombeat/photo/11449196-large.jpg" alt="...">
+        <div class="caption text-center">
+          <h4>My Activities</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  <div class="row"></div>
+
+<% else %>
+
+  <p>
+    <strong>First name:</strong>
+    <%= @user.first_name %>
+  </p>
+
+  <p>
+    <strong>Last name:</strong>
+    <%= @user.last_name %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </p>
+
+  <p>
+    <strong>Password:</strong>
+    <%= @user.password %>
+  </p>
+
+  <p>
+    <strong>Birthday:</strong>
+    <%= @user.birthday %>
+  </p>
+
+  <p>
+    <strong>Phone:</strong>
+    <%= @user.phone %>
+  </p>
+
+  <p>
+    <strong>Grade:</strong>
+    <%= @user.grade %>
+  </p>
+
+  <p>
+    <strong>Image:</strong>
+    <%= @user.image %>
+  </p>
+
+<% end %>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
