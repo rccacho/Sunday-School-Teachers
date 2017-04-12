@@ -3,25 +3,17 @@
 
 <% if current_user?(@user) %>
 
-  <div>
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="http://media.oregonlive.com/themombeat/photo/11449196-large.jpg" alt="...">
-        <div class="caption text-center">
-          <h4>My Messages</h4>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class='row'>
+    <div class='profile col-xs-12 col-sm-4 col-md-4'>
+      <%if current_user.avatar.blank? %>
+        <%= image_tag('http://www.sessionlogs.com/media/icons/defaultIcon.png') %>
+      <% else %>
+        <%= image_tag(current_user.image) %>
+      <% end %>
 
-  <div>
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="http://media.oregonlive.com/themombeat/photo/11449196-large.jpg" alt="...">
-        <div class="caption text-center">
-          <h4>My Activities</h4>
-        </div>
-      </div>
+      <p>
+        <%= "Teacher " + current_user.first_name %>
+      </p>
     </div>
   </div>
     
@@ -31,6 +23,18 @@
   <%= link_to 'Back', users_path %>
 
 <% else %>
+
+  <div class='row'>
+    <div class='profile col-xs-12 col-sm-4 col-md-4'>
+      <%if @user.avatar.blank? %>
+        <%= image_tag('http://www.sessionlogs.com/media/icons/defaultIcon.png') %>
+      <% else %>
+        <%= image_tag(@user.image) %>
+      <% end %>
+    </div>
+  </div>
+    
+  <div class="row"></div>
 
   <p>
     <strong>First name:</strong>
