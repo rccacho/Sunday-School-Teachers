@@ -135,6 +135,7 @@ a1 = Activity.create ({
 	description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	materials: "crayons, paper, scissors",
 	media_ref: "none",
+	grade: "1B",
 	message_id: m1.id,
 	user_id: potato.id
 })
@@ -144,6 +145,7 @@ a2 = Activity.create ({
 	description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	materials: "markers, paper, scissors, glue",
 	media_ref: "none",
+	grade: "1G",
 	message_id: m2.id,
 	user_id: foo.id
 })
@@ -153,6 +155,7 @@ a3 = Activity.create ({
 	description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	materials: "colored paper, scissors, popsicle sticks",
 	media_ref: "none",
+	grade: "2G",
 	message_id: m3.id,
 	user_id: bar.id
 })
@@ -162,6 +165,7 @@ a4 = Activity.create ({
 	description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	materials: "pencils, paper, scissors, googly eyes",
 	media_ref: "none",
+	grade: "5B",
 	message_id: m4.id,
 	user_id: baz.id
 })
@@ -171,6 +175,7 @@ a5 = Activity.create ({
 	description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	materials: "crayons, paper, scissors",
 	media_ref: "none",
+	grade: "3G",
 	message_id: m1.id,
 	user_id: foo.id
 })
