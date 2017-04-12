@@ -1,0 +1,8 @@
+<%= render 'layouts/header', user: @user %>
+<%= render 'layouts/spacer', user: @user %>
+
+<% @activities.each do |activity| %>
+
+<p>Grade: <%=link_to "#{activity.grade}", activity_path(activity) %></p>
+
+<% end %>

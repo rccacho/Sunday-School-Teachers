@@ -3,31 +3,38 @@
 
 <% if current_user?(@user) %>
 
-  <div>
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="http://media.oregonlive.com/themombeat/photo/11449196-large.jpg" alt="...">
-        <div class="caption text-center">
-          <h4>My Messages</h4>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class='row'>
+    <div class='profile col-xs-12 col-sm-4 col-md-4 text-center'>
+      <%if current_user.avatar.blank? %>
+        <%= image_tag('http://www.sessionlogs.com/media/icons/defaultIcon.png') %>
+      <% else %>
+        <%= image_tag(current_user.avatar) %>
+      <% end %>
 
-  <div>
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="http://media.oregonlive.com/themombeat/photo/11449196-large.jpg" alt="...">
-        <div class="caption text-center">
-          <h4>My Activities</h4>
-        </div>
-      </div>
+      <p>
+        <%= "Teacher " + current_user.first_name %>
+      </p>
     </div>
   </div>
     
   <div class="row"></div>
 
+  <%= link_to 'Edit', edit_user_path(@user) %> |
+  <%= link_to 'Back', users_path %>
+
 <% else %>
+
+  <div class='row'>
+    <div class='profile col-xs-12 col-sm-4 col-md-4 text-center'>
+      <%if @user.avatar.blank? %>
+        <%= image_tag('http://www.sessionlogs.com/media/icons/defaultIcon.png') %>
+      <% else %>
+        <%= image_tag(@user.avatar) %>
+      <% end %>
+    </div>
+  </div>
+    
+  <div class="row"></div>
 
   <p>
     <strong>First name:</strong>
@@ -45,11 +52,6 @@
   </p>
 
   <p>
-    <strong>Password:</strong>
-    <%= @user.password %>
-  </p>
-
-  <p>
     <strong>Birthday:</strong>
     <%= @user.birthday %>
   </p>
@@ -64,13 +66,4 @@
     <%= @user.grade %>
   </p>
 
-  <p>
-    <strong>Image:</strong>
-    <%= @user.image %>
-  </p>
-
 <% end %>
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
