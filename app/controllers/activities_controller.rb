@@ -9,6 +9,9 @@ class ActivitiesController < ApplicationController
 
   # GET /activities/1
   def show
+    if !logged_in?
+      redirect_to login_path
+    end
   end
 
   # GET /activities/new
