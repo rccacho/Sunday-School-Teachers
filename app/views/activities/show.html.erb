@@ -1,8 +1,7 @@
 <%= render 'layouts/header', user: @user %>
 <%= render 'layouts/spacer', user: @user %>
 
-<p id="notice"><%= notice %></p>
-
+<p>Grade: <%= @activity.grade %></p>
 <p>Key verse: <%= @activity.key_verse %></p>
 <p>Review: <%= @activity.review %></p>
 <p>Description: <%= @activity.description %></p>
