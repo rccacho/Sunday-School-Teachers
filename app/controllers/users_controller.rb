@@ -33,7 +33,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in(@user)
       flash[:success] = "User created successfully!"
-      redirect_to user_path(@user)
+      redirect_to root_path
     else
       flash[:error] = "Not Valid Account Info"
       redirect_to login_path
