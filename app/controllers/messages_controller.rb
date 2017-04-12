@@ -11,6 +11,9 @@ class MessagesController < ApplicationController
 
   # GET /messages/1
   def show
+    if !logged_in?
+      redirect_to login_path
+    end
   end
 
   # GET /messages/new

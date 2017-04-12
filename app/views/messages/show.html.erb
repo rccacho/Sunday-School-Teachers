@@ -1,5 +1,6 @@
 <%= render 'layouts/header', user: @user %>
 <%= render 'layouts/spacer', user: @user %>
+<%= render 'layouts/banner', user: @user %>
 
 <%= link_to 'Smallgroup Activities', message_activities_path(@message), class: "btn btn-default" %>
 <%= link_to 'Create Smallgroup Activity', new_message_activity_path(@message), class: "btn btn-default" %>

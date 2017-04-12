@@ -17,6 +17,7 @@
     <% if logged_in? %>
       <li><%= link_to "Profile", user_path(current_user) %></li>
       <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+      <li><%= link_to "All Messages", messages_path %></li>
       <li><a href="/logout">Log Out</a></li>
     <% end %>
     </ul>
