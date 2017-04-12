@@ -1,13 +1,12 @@
 <%= render 'layouts/header', user: @user %>
 <%= render 'layouts/spacer', user: @user %>
 
-<p id="notice"><%= notice %></p>
-
   <p>Series: <%= @message.series %></p>
   <p>Title: <%= @message.title %></p>
   <p>Costumes: <%= @message.costumes %></p>
   <p>Props: <%= @message.props %></p>
   <p><%= @message.content %></p>
+  <p><%= link_to "Smallgroup Activities", message_activities_path %>
 
 <%= link_to 'Edit', edit_message_path(@message) %> |
 <%= link_to 'Back', messages_path %>
