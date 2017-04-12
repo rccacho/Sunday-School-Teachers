@@ -1,0 +1,47 @@
+<%= form_for activity, method: :put, url: activity_path(activity.id) do |f| %>
+  <% if activity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+
+      <ul>
+      <% activity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :grade %>
+    <%= f.text_field :grade, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :key_verse %>
+    <%= f.text_field :key_verse, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :review %>
+    <%= f.text_field :review, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :materials %>
+    <%= f.text_field :materials, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :media_ref %>
+    <%= f.text_field :media_ref, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'OK', class: "btn btn-default" %>
+  </div>
+<% end %>
