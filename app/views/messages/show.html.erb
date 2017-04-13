@@ -5,11 +5,11 @@
 <%= link_to 'Smallgroup Activities', message_activities_path(@message), class: "btn btn-default" %>
 <%= link_to 'Create Smallgroup Activity', new_message_activity_path(@message), class: "btn btn-default" %>
 
-  <p>Series: <%= @message.series %></p>
-  <p>Title: <%= @message.title %></p>
-  <p>Costumes: <%= @message.costumes %></p>
-  <p>Props: <%= @message.props %></p>
-  <p><%= @message.content %></p>
+  <h4>Series: <%= @message.series %><h4>
+  <h4>Title: <%= @message.title %><h4>
+  <h4>Costumes: <%= @message.costumes %><h4>
+  <h4>Props: <%= @message.props %><h4>
+  <h4><%= @message.content %><h4>
 
 
 <%= link_to 'Edit', edit_message_path(@message) %> |

@@ -12,9 +12,9 @@
         <%= image_tag(current_user.avatar) %>
       <% end %>
 
-      <p>
+      <h4>
         <%= "Teacher " + current_user.first_name %>
-      </p>
+      </h4>
     </div>
   </div>
     
@@ -37,34 +37,34 @@
     
   <div class="row"></div>
 
-  <p>
-    <strong>First name:</strong>
+  <h4>
+  First name: 
     <%= @user.first_name %>
-  </p>
+  </h4>
 
-  <p>
-    <strong>Last name:</strong>
+  <h4>
+  Last name:
     <%= @user.last_name %>
-  </p>
+  </h4>
 
-  <p>
-    <strong>Email:</strong>
+  <h4>
+  Email:
     <%= @user.email %>
-  </p>
+  </h4>
 
-  <p>
-    <strong>Birthday:</strong>
+  <h4>
+  Birthday:
     <%= @user.birthday %>
-  </p>
+  </h4>
 
-  <p>
-    <strong>Phone:</strong>
+  <h4>
+  Phone:
     <%= @user.phone %>
-  </p>
+  </h4>
 
-  <p>
-    <strong>Grade:</strong>
+  <h4>
+  Grade:
     <%= @user.grade %>
-  </p>
+  </h4>
 
 <% end %>

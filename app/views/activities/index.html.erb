@@ -4,6 +4,6 @@
 
 <% @activities.each do |activity| %>
 
-<p>Grade: <%=link_to "#{activity.grade}", activity_path(activity) %></p>
+<h4>Grade: <%=link_to "#{activity.grade}", activity_path(activity) %></h4>
 
 <% end %>

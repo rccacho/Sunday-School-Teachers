@@ -2,12 +2,12 @@
 <%= render 'layouts/spacer', user: @user %>
 <%= render 'layouts/banner', user: @user %>
 
-<p>Grade: <%= @activity.grade %></p>
-<p>Key verse: <%= @activity.key_verse %></p>
-<p>Materials: <%= @activity.materials %></p>
-<p>Media Reference: <%= @activity.media_ref %></p>
-<p>Review: <%= @activity.review %></p>
-<p>Description: <%= @activity.description %></p>
+<h4>Grade: <%= @activity.grade %></h4>
+<h4>Key verse: <%= @activity.key_verse %></h4>
+<h4>Materials: <%= @activity.materials %></h4>
+<h4>Media Reference: <%= @activity.media_ref %></h4>
+<h4>Review: <%= @activity.review %></h4>
+<h4>Description: <%= @activity.description %></h4>
 
 <%= link_to 'Edit', edit_activity_path(@activity) %> 
 
