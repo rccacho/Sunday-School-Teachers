@@ -10,7 +10,7 @@
         <%if user.avatar.blank? %>
           <%= image_tag('http://www.sessionlogs.com/media/icons/defaultIcon.png') %>
         <% else %>
-          <%= image_tag(user.avatar.url(:large) ) %>
+          <%= image_tag(user.avatar) %>
         <% end %> 
         <div class="caption text-center">
           <h4><%=link_to "Teacher " + user.first_name + " " + user.last_name, user_path(user) %></h4>
