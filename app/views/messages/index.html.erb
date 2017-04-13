@@ -15,8 +15,7 @@
 
 <% @messages.each do |message| %>
   <div>
-    <p>Series: <%= message.series %></p>
-    <p>Title: <%=link_to "#{message.title}", message_path(message) %></p>
+    <h4><%=link_to "#{message.series} - #{message.title}", message_path(message) %></h4>
   </div>
 <% end %>
 
