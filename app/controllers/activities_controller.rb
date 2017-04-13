@@ -4,7 +4,7 @@ class ActivitiesController < ApplicationController
 
   # GET /activities
   def index
-    @activities = Activity.all
+    @activities = Activity.where(message_id: @message.id)
   end
 
   # GET /activities/1
