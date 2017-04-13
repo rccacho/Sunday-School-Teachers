@@ -20,5 +20,14 @@
 }
 
 .banner {
-  width: 100%
+  width: 100%;
+  left: 0;
+}
+
+@media (max-width: 460px) {
+  body {
+  	.btn{
+      margin: 5px;
+	}
+  }
 }
