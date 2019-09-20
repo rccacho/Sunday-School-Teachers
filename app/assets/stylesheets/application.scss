@@ -17,14 +17,16 @@
 
 body {
   font-family: 'Lato', sans-serif!important;
-} 
+  margin: 1% auto;
+  width: 100%;
+}
 
 li {
   font-family: 'Lato', sans-serif!important;
   }
 
 .spacer {
-  padding-top:18px 
+  padding-top:18px
 }
 
 .banner {
@@ -36,7 +38,7 @@ li {
   body {
   	.btn{
       margin: 5px;
-	}
+	   }
   }
 }
 
